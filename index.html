@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSustentável - Mapeamento com Drones</title>
+    <style>
+        /* Estilização Geral */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f9f4;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        nav {
+            background-color: #2e7d32;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 { color: #1b5e20; }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 5px solid #4caf50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #1b5e20;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .highlight {
+            background: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #2e7d32;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#beneficios">Sustentabilidade</a>
+    </nav>
+
+    <header id="inicio">
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>Utilizando Drones para o Mapeamento e Saúde do Solo</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>O Equilíbrio entre Produção e Preservação</h2>
+            <p>O projeto foca no uso de <strong>VANTs (Veículos Aéreos Não Tripulados)</strong> para monitorar a saúde do solo em tempo real. Através do mapeamento aéreo, conseguimos identificar áreas de degradação antes que se tornem problemas irreversíveis.</p>
+            
+            <div class="highlight">
+                "A tecnologia de precisão permite produzir mais em menos espaço, preservando os recursos naturais para as próximas gerações."
+            </div>
+        </section>
+
+        <section id="tecnologia">
+            <h2>Como funciona o Mapeamento?</h2>
+            <p>Utilizamos sensores multiespectrais que captam luz invisível ao olho humano. O principal indicador é o <strong>NDVI</strong>:</p>
+            <p style="text-align: center; font-size: 1.2em; font-weight: bold;">
+                $$NDVI = \frac{(NIR - RED)}{(NIR + RED)}$$
+            </p>
+            <p>Este cálculo gera mapas de calor onde o agricultor consegue ver exatamente onde o solo precisa de mais atenção ou onde há excesso de insumos.</p>
+        </section>
+
+        <section id="beneficios" class="feature-grid">
+            <div class="card">
+                <h3>Redução de Químicos</h3>
+                <p>Com o mapa em mãos, a aplicação de fertilizantes é feita apenas onde é necessário, evitando a contaminação de lençóis freáticos.</p>
+            </div>
+            <div class="card">
+                <h3>Prevenção de Erosão</h3>
+                <p>Drones detectam falhas no terreno e curvas de nível rompidas, permitindo correções rápidas no manejo do solo.</p>
+            </div>
+            <div class="card">
+                <h3>Economia de Água</h3>
+                <p>Identificamos áreas com estresse hídrico, otimizando o uso da irrigação e combatendo o desperdício.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Projeto Agrinho 2026 | Aluna: [Seu Nome] | 3º Ano Ensino Médio</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* ==========================================================================
+   STYLE.CSS - Projeto Agrinho 2026
+   Tema: Agro Forte, Futuro Sustentável
+   ========================================================================== */
+
+/* 1. Variáveis de Cores (Facilita a manutenção) */
+:root {
+    --verde-escuro: #1b5e20;
+    --verde-principal: #2e7d32;
+    --verde-claro: #4caf50;
+    --verde-suave: #e8f5e9;
+    --branco: #ffffff;
+    --cinza-fundo: #f4f9f4;
+    --texto: #333333;
+}
+
+/* 2. Reset e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--cinza-fundo);
+}
+
+/* 3. Navegação */
+nav {
+    background-color: var(--verde-principal);
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a5d6a7;
+}
+
+/* 4. Cabeçalho (Hero Section) */
+header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 5. Layout do Conteúdo */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--branco);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+section {
+    padding: 40px 0v
