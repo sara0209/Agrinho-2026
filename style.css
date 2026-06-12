@@ -1,9 +1,9 @@
 /* ==========================================================================
-   STYLE.CSS - Projeto Agrinho 2026
+   STYLE.CSS - Projeto Agro 2026
    Tema: Cinza, Preto e Branco
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
     --branco: #ffffff;
@@ -23,7 +23,7 @@
 }
 
 body {
-    font-family: 'Montserrat', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: var(--texto);
     background-color: var(--cinza-claro);
@@ -108,7 +108,7 @@ nav a:hover {
 .hero-section {
     position: relative;
     min-height: 520px;
-    background: linear-gradient(180deg, rgba(8, 40, 18, 0.35), rgba(8, 40, 18, 0.65)), url('https://images.unsplash.com/photo-1518450808307-604322baff96?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(8, 40, 18, 0.35), rgba(8, 40, 18, 0.65)), url('https://images.unsplash.com/photo-1561002740-9673dbe9f3a0?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,14 +128,30 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: var(--branco);
     text-align: center;
+    overflow: hidden;
 }
 
 header::after {
     display: none;
 }
 
+.hero-tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #f0f9f0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+}
+
 header h1,
-header p {
+header p,
+.hero-subtext {
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -151,11 +167,76 @@ header h1 {
     font-weight: 900;
 }
 
-header p {
+header p,
+.hero-subtext {
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.03rem;
     color: rgba(255,255,255,0.9);
+}
+
+.hero-subtext {
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.hero-visuals {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    opacity: 0.7;
+}
+
+.spray-dot,
+.spray-line {
+    display: block;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+}
+
+.spray-dot {
+    width: 10px;
+    height: 10px;
+}
+
+.spray-line {
+    width: 120px;
+    height: 4px;
+}
+
+.hero-visuals .spray-line:nth-child(2) {
+    width: 80px;
+}
+
+.hero-visuals .spray-line:nth-child(4) {
+    width: 100px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(215, 255, 214, 0.18), transparent 22%),
+                radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.17), transparent 18%),
+                radial-gradient(circle at 50% 90%, rgba(186, 255, 193, 0.14), transparent 24%);
+    pointer-events: none;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 520px;
+    background: linear-gradient(180deg, rgba(8, 40, 18, 0.35), rgba(8, 40, 18, 0.65)), url('https://images.unsplash.com/photo-1518450808307-604322baff96?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    overflow: hidden;
 }
 
 .container {
@@ -370,10 +451,21 @@ footer {
     padding: 32px 0;
 }
 
+#dados p,
+#sobre p {
+    max-width: 800px;
+    margin: 0 auto 18px;
+}
+
 #dados ul {
-    list-style: disc inside;
+    list-style: disc outside;
+    list-style-position: outside;
     color: var(--texto-secundario);
-    margin-top: 16px;
+    margin: 16px auto 0;
+    padding-left: 1.4rem;
+    text-align: left;
+    max-width: 600px;
+}
 }
 
 #sobre p {
